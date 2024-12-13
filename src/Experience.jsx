@@ -2,7 +2,7 @@ import { Perf } from 'r3f-perf';
 import { useControls } from 'leva';
 import { Grid, Center, GizmoHelper, GizmoViewport, OrbitControls, Environment, useHelper, ContactShadows } from '@react-three/drei';
 import { RigidBody } from '@react-three/rapier';
-// import CharacterController from '../private/CharacterController';
+import CharacterController from './CharacterController';
 import { Leva } from 'leva';
 import { PointLightHelper } from 'three';
 import { useRef } from 'react';
@@ -101,16 +101,18 @@ export default function Experience() {
         far={10}
       />
 
-      {/* <CharacterController
+      {/* Character Controller */}
+      <CharacterController
         enableRotation={enableRotation}
         enableAnimations={enableAnimations}
         enableMouse={enableMouse}
-      /> */}
+      />
 
       {/* Camera */}
       {enableCamera && <OrbitControls makeDefault />}
 
       <Environment preset="city" />
+
       <GizmoHelper alignment="bottom-right" margin={[80, 80]}>
         <GizmoViewport axisColors={['#9d4b4b', '#2f7f4f', '#3b5b9d']} labelColor="white" />
       </GizmoHelper>
