@@ -1,0 +1,29 @@
+.vscode
+.history
+.__pycache__
+__pycache__
+.ipynb_checkpoints
+
+# build output
+dist/
+# generated types
+.astro/
+.vercel/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific fsiles
+.DS_Store
+
+private/
